@@ -4,3 +4,4 @@ streamlit-option-menu
 joblib
 folium
 streamlit_folium
+openpyxl

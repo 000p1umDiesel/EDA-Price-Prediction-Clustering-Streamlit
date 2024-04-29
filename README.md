@@ -3,7 +3,9 @@
 
 # Данные были предоставлен с Kaggle: <a href="https://www.kaggle.com/datasets/nelgiriyewithana/new-york-housing-market">link</a>
 # **Ноутбук Kaggle <a href="https://www.kaggle.com/spalatov/eda-price-prediction-clustering">ноутбук</a>**
-# **Streamlit App <a href="https://eda-price-prediction-clustering-app-qilf9ka3e7yujynxma9cfd.streamlit.app">ноутбук</a>**
+# **Streamlit App <a href="https://eda-price-prediction-clustering-app-qilf9ka3e7yujynxma9cfd.streamlit.app">ссылка</a>**
+
+## Если на сайте не отображается левое меню - закройте и октройте
 
 
 # Проект разбит на 4 частей:

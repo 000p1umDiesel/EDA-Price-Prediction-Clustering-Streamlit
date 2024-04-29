@@ -1,8 +1,8 @@
-import subprocess
+# import subprocess
 
-requirements_file = "requirements_web.txt"
+# requirements_file = "requirements_web.txt"
 
-subprocess.call(["pip", "install", "-r", requirements_file])
+# subprocess.call(["pip", "install", "-r", requirements_file])
 
 import streamlit as st
 from streamlit_option_menu import option_menu

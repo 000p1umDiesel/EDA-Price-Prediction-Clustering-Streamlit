@@ -5,3 +5,4 @@ joblib
 folium
 streamlit_folium
 openpyxl
+scikit-learn

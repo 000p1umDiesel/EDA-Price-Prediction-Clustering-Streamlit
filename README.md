@@ -1,7 +1,7 @@
 # EDA-Price-Prediction-Clustering-Streamlit
 Построение модели для определение цены на недвижимость в Нью Йорке, построение кластеризация для распределения домов на классы: эконом, комфорт, бизнес, элитный. Создание веб-сервиса для предсказания цены и класса недвижимости
 
-# Данные были предоставлен с Kaggle: <a href="https://www.kaggle.com/datasets/nelgiriyewithana/new-york-housing-market">link</a>
+# Данные были предоставлен с Kaggle: <a href="https://www.kaggle.com/datasets/nelgiriyewithana/new-york-housing-market">ссылка</a>
 # **Ноутбук Kaggle <a href="https://www.kaggle.com/spalatov/eda-price-prediction-clustering">ноутбук</a>**
 # **Streamlit App <a href="https://eda-price-prediction-clustering-app-qilf9ka3e7yujynxma9cfd.streamlit.app">ссылка</a>**
 

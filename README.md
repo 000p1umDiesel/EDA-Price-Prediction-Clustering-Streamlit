@@ -5,7 +5,7 @@
 # **Ноутбук Kaggle <a href="https://www.kaggle.com/spalatov/eda-price-prediction-clustering">ноутбук</a>**
 # **Streamlit App <a href="https://eda-price-prediction-clustering-app-qilf9ka3e7yujynxma9cfd.streamlit.app">ссылка</a>**
 
-## Если на сайте не отображается левое меню - закройте и октройте
+## Если на сайте не отображается левое меню - закройте и заново откройте меню 
 
 
 # Проект разбит на 4 частей:

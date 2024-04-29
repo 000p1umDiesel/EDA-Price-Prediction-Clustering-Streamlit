@@ -5,9 +5,10 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-selected = option_menu('Недвижимость Нью-Йорка', ["Главное", "Виды недвижимости Нью-Йорка", "Карта свободной недвижимости","Рассчитать стоимость и определить класс", 'Модели'], 
-    icons=['briefcase', 'house', 'cloud','cash','gear'], menu_icon = 'cast', 
-    default_index=0, orientation="horizontal")
+with st.sidebar:
+    selected = option_menu('Недвижимость Нью-Йорка', ["Главное", "Виды недвижимости Нью-Йорка", "Карта свободной недвижимости","Рассчитать стоимость и определить класс", 'Модели'], 
+        icons=['briefcase', 'house', 'cloud','cash','gear'], menu_icon = 'cast', 
+        default_index=0, orientation="horizontal")
 
 
 

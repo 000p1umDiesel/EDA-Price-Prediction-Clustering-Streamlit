@@ -1,5 +1,7 @@
 import subprocess
+
 requirements_file = "requirements_web.txt"
+
 subprocess.call(["pip", "install", "-r", requirements_file])
 
 import streamlit as st
@@ -7,7 +9,6 @@ from streamlit_option_menu import option_menu
 import joblib
 import pandas as pd
 import folium
-from streamlit_folium import st_folium
 
 selected = option_menu('Недвижимость Нью-Йорка', ["Главное", "Виды недвижимости Нью-Йорка", "Карта свободной недвижимости","Рассчитать стоимость и определить класс", 'Модели'], 
     icons=['briefcase', 'house', 'cloud','cash','gear'], menu_icon = 'cast', 

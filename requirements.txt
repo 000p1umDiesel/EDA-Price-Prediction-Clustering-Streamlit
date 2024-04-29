@@ -1,6 +1,6 @@
 streamlit
 pandas
-streamlit-option-menu == 0.3.2
+streamlit-option-menu
 joblib
 folium
 streamlit_folium

@@ -2,4 +2,4 @@ streamlit
 pandas
 streamlit_option_menu 
 folium
-streamlit_folium import st_folium
+streamlit_folium

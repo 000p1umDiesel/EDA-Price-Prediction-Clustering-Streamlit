@@ -17,7 +17,7 @@ if selected == 'Рассчитать стоимость и определить 
         type_options = ('Co-op', 'House', 'Condo', 'Multi-family home', 'Condop', 'Townhouse', 'Land')
         district_options = ('Queens', 'New York', 'Kings', 'Richmond', 'Bronx')
 
-        type = st.sidebar.selectbox('Выберете тип дома', type_options)
+        type = st.sidebar.selectbox('Выберите тип дома', type_options)
         
         if type == 'Land':
             # Если тип дома - "Land", заполняем остальные поля значениями по умолчанию (1)

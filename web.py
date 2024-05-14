@@ -707,10 +707,11 @@ elif selected == 'Подобрать недвижимость':
             district = st.selectbox('Район', district_options)
             close_to_sights = st.selectbox('Близость к достопримечательностям', close_to_sights_options)
             close_to_sights = None if close_to_sights == 'Любой' else (1 if close_to_sights == 'Да' else 0)
-            class_estate = st.selectbox('Класс', class_options[1:])
+            class_estate = st.selectbox('Класс', class_options)
             price = st.slider('Выберите цену', min_value=0, max_value=15000000, step=1000)
+            sqft = sqft = st.number_input('Введите размер площади в квадратных метрах', step=1, min_value=950, max_value=9999)
 
-            return price, district, close_to_sights, class_estate, type, None, None, None
+            return price, None, None, sqft, district, close_to_sights, class_estate, type
 
         else:
             price = st.slider('Выберите цену', min_value=0, max_value=15000000, step=1000)
@@ -729,9 +730,11 @@ elif selected == 'Подобрать недвижимость':
     data = fast_kmeans()
 
     if type != 'Land':
+        min_sqft = sqft * 0.9  # Нижний предел - 90% от исходного значения sqft
+        max_sqft = sqft  # Верхний предел - исходное значение sqft
         condition = (data['BEDS'] == bed) & \
                     (data['BATH'] == bath) & \
-                    (data['PROPERTYSQFT'] == sqft) & \
+                    ((data['PROPERTYSQFT'] >= min_sqft) & (data['PROPERTYSQFT'] <= max_sqft)) & \
                     (data['PRICE'] <= price)
                     
         if class_estate != 'Любой':
@@ -747,6 +750,25 @@ elif selected == 'Подобрать недвижимость':
             condition &= (data['Close to the sights'] == close_to_sights)
 
         similar_rows = data.loc[condition]
+
+    else:
+
+        condition = (data['PRICE'] <= price)
+    
+        if type != 'Любой':
+            condition &= (data['TYPE'] == type)
+
+        if class_estate != 'Любой':
+            condition &= (data['Класс недвижимости'] == class_estate)
+
+        if district != 'Любой':
+            condition &= (data['District'] == district)
+
+        if close_to_sights is not None: 
+            condition &= (data['Close to the sights'] == close_to_sights)
+        
+        similar_rows = data.loc[condition]
+        similar_rows = similar_rows.drop(['BEDS', 'BATH'], axis = 1)
 
     if not similar_rows.empty:
         my_map = folium.Map(location=[similar_rows['LATITUDE'].mean(), similar_rows['LONGITUDE'].mean()], zoom_start=10.5)

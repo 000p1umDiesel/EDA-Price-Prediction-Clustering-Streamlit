@@ -333,7 +333,7 @@ elif selected == 'Карта свободной недвижимости':
 
     df = df1.merge(df2, left_index=True, right_index=True)
 
-    select_options = ['Любой', 'Queens', 'New York', 'Kings', 'Richmond', 'Bronx']
+    select_options = ['Все', 'Queens', 'New York', 'Kings', 'Richmond', 'Bronx']
 
     district = st.selectbox('Выбрать район для отрисовки', select_options)
 
@@ -347,7 +347,7 @@ elif selected == 'Карта свободной недвижимости':
         'Bronx': ('purple', 'info-home')
     }
 
-    if district == 'Любой':
+    if district == 'Все':
         for index, row in df.head(100).iterrows():
             folium.Marker(
                 location=[row['LATITUDE'], row['LONGITUDE']],
